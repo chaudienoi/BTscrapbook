@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  background: url('images/texture-paper.jpg') repeat;
+  font-family: 'Playfair Display', serif;
+  color: #0c5b02;
+}
+
+header {
+  text-align: center;
+  padding: 1.5rem 0;
+  background: rgba(255,255,255,0.9);
+  border-bottom: 0px solid #ddd;
+  font-family: 'Handlee', cursive;
+  font-size: 1.8rem;
+}
+
+#gallery {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 60px 10px;
+}
+
+.scrap-item {
+  position: absolute;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.scrap-item img {
+  width: 440px;
+  border-radius: 6px;
+  box-shadow: 2px 3px 8px rgba(0,0,0,0.2);
+  transform: rotate(var(--rotate));
+}
+
+.scrap-item:hover {
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+.scrap-item .sticker {
+  position: absolute;
+  width: 60px;
+  top: -20px;
+  right: -15px;
+  transform: rotate(-10deg);
+}
+
+/* Popup */
+#popup.hidden {
+  display: none;
+}
+
+#popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: #fff;
+  color: rgb(26, 26, 26);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.popup-content img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.popup-content p {
+  font-family: 'Handlee', cursive;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+#close {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #777;
+}
